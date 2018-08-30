@@ -1,14 +1,14 @@
 # Time Laser Display
 
-Displays the time in 24hr format on a glow in the dark sticker sheet using an ultraviolet laser. Utilizes x and y servo motors to draw out individual numbers, a tiny RTC to tell the time, and an Arduino UNO for processing.
+Displays the time in 24hr format on a glow in the dark sticker sheet using an ultraviolet laser. Utilizes x and y servo motors to draw out individual numbers, a tiny RTC to tell the time, and an Arduino UNO for processing. The following videos display how the laser display works in light and dark environments.
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=BrsYRhGEyC4
 " target="_blank"><img src="http://img.youtube.com/vi/BrsYRhGEyC4/0.jpg" 
-alt="Dark Laser Demo" width="240" height="180" border="10" /></a>
+alt="Dark Laser Demo" width="240" height="180" border="10" display="table" /></a>
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=GYEmO1oykZE
 " target="_blank"><img src="http://img.youtube.com/vi/GYEmO1oykZE/0.jpg" 
-alt="Light Laser Demo" width="240" height="180" border="10" /></a>
+alt="Light Laser Demo" width="240" height="180" border="10" display="table" /></a>
 
 ## Getting Started
 
