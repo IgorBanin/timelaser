@@ -2,13 +2,15 @@
 
 Displays the time in 24hr format on a glow in the dark sticker sheet using an ultraviolet laser. Utilizes x and y servo motors to draw out individual numbers, a tiny RTC to tell the time, and an Arduino UNO for processing.
 
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YBrsYRhGEyC4BrsYRhGEyC4/0.jpg)](http://www.youtube.com/watch?v=YBrsYRhGEyC4)
+
 ## Getting Started
 
 This project is programmed on an Arduino UNO, using the [Arduino IDE](https://www.arduino.cc/en/Main/Software "Arduino IDE Download"). The Arduino IDE is based on C/C++.
 
 ### Materials Used:
 
-###### Links provided are for convenience/where I got some of my pieces. They do not necessarily reflect the best prices. 
+###### Links provided are for convenience/where I got some of my pieces. They do not necessarily reflect the best prices/best places to get parts. 
 
  - [Arduino UNO](https://www.amazon.com/ARDUINO-A000073-DEV-BRD-ATMEGA328/dp/B007R9TUJE/ref=sr_1_5?ie=UTF8&qid=1535558536&sr=8-5&keywords=arduino+uno)(Other UNO boards will most likely work)
  - [Breadboard Jumper Wires](https://www.amazon.com/120pcs-Multicolored-Breadboard-Arduino-Raspberry/dp/B072L1XMJR/ref=sr_1_4?ie=UTF8&qid=1535558804&sr=8-4&keywords=male+female+leads)
@@ -22,24 +24,11 @@ This project is programmed on an Arduino UNO, using the [Arduino IDE](https://ww
  - [12x12in plexiglass](https://www.amazon.com/gp/product/B004DYW31I/ref=oh_aui_search_detailpage?ie=UTF8&psc=1)
  - [x1 Glow in the Dark Sticker Sheet](https://www.amazon.com/gp/product/B00YU7R3H2/ref=oh_aui_search_detailpage?ie=UTF8&psc=1)
  - 12x18in wooden board
+ - USB Data Sync Cable for Arduino UNO
 
-### Installing
+### Assembly Instructions
 
-A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
@@ -75,19 +64,11 @@ Add additional notes about how to deploy this on a live system
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
 * **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
