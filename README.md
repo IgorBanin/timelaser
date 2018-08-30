@@ -4,7 +4,7 @@ Displays the time in 24hr format on a glow in the dark sticker sheet using an ul
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=BrsYRhGEyC4
 " target="_blank"><img src="http://img.youtube.com/vi/BrsYRhGEyC4/0.jpg" 
-alt="Dark Laser Demo" width="240" height="180" border="10" style="float: left; width: 48%; margin-right: 1%; margin-bottom: 0.5em;" /></a>
+alt="Dark Laser Demo" style="float: left; width: 48%; margin-right: 1%; margin-bottom: 0.5em;" /></a>
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=GYEmO1oykZE
 " target="_blank"><img src="http://img.youtube.com/vi/GYEmO1oykZE/0.jpg" 
