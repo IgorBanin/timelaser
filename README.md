@@ -32,7 +32,7 @@ This project is programmed on an Arduino UNO, using the [Arduino IDE](https://ww
  - 12x18in wooden board
  - USB Data Sync Cable for Arduino UNO
 
-### Assembly Instructions
+## Assembly Instructions
 
 
 
