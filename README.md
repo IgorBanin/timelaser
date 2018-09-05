@@ -148,8 +148,7 @@ Important to note, that this solution only works for my specific setup. The rang
 
  - (cQueue)[ Queue Implementation in C](https://github.com/SMFSW/cQueue)
  - (Servo) Default Servo library
- - (RTClib)[Tiny RTC library](https://www.elecrow.com/wiki/index.php?title=File:RTC.zip)
-
+ - (RTClib)[ Tiny RTC library](https://www.elecrow.com/wiki/index.php?title=File:RTC.zip)
 
 ### Useful Links
 
