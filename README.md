@@ -44,7 +44,7 @@ There are two types of UV lasers out there: ones with wires and ones without. I 
 
 I'll be covering the assembly for the regular laser pointer without wires, because that is what I used for my project. The idea behind this assembly is that you want to turn the UV laser from the first image into something like the second image. Firstly, unscrew the laser so you only have the head of the laser. Grab two wires and strip a little bit off both ends; to create attachment pins on either side(you can make any jumper wires work). Take one wire and carefully solder it onto the spring of the laser, this will act as the positive terminal. Using some heat shrink and a heat gun, insulate the wire attached to the spring. Take the second wire and press it down onto the laser pointer button, and secure it with electric tape(make sure the button is pressed down), this will be ground.
 
-![Laser](images/40363688_1786586968063415_6519779304723709952_n (1).jpg)
+![Laser](images/40363688_1786586968063415_6519779304723709952_n.jpg)
 
 ### Pan and Tilt Servo Mount Assembly
 
@@ -54,9 +54,13 @@ Now that the proper modifications to the laser have been made, it is time to att
 
 Secure the bottom portion of plexiglass using a vice; heat it up  using a heat gun, and start to slowly bend it backwards. Once the plexiglass is bent at more than a 90 degree angle, or has achieved its desired shape, let it cool. To finish, place a glow in the dark sticker sheet on the front of the plexiglass(the side facing the laser).
 
+![Screen](images/40294498_2226196900743574_6721739876846272512_n.jpg)
+
 ### Board Assembly
 
-Apply acrylic and wood binding glue on one side of the wooden board; place bent portion of the screen to the glue, press down and wait to dry. Place the pan and tilt servo mount with laser attached **XYZ** cm away for the screen, and secure with screws. (Optional) Use some velcro patches to create secure locations for the Arduino UNO, and breadboard behind the laser.
+Apply acrylic and wood binding glue on one side of the wooden board; place bent portion of the screen to the glue, press down and wait to dry. Place the pan and tilt servo mount with laser attached **XYZ** cm away for the screen, and secure using hot glue or screws(the pan and tilt servo mount moves around a lot, so it's important that it's well secured). (Optional) Use some velcro patches to create secure locations for the Arduino UNO, and breadboard behind the laser.
+
+![Board](images/40330276_1673844129391158_4240454445797736448_n.jpg)
 
 ### Wiring
 
