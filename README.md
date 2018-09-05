@@ -32,19 +32,32 @@ This project is programmed on an Arduino UNO, using the [Arduino IDE](https://ww
  - 12x18in wooden board
  - USB Data Sync Cable for Arduino UNO
 
+### Other Materials used:
+ - block foam
+ - electric tape
+ - glue gun
+ - solder
+ - soldering iron
+ - heat gun
+ - heat shrink tube
+ - acrylic and wood binding glue
+
 ## Assembly Instructions
 
 ### Laser Assembly
 
 There are two types of UV lasers out there: ones with wires and ones without. I recommend getting the ones with wires because that simplifies the assembly process.
 
-![alt text](http://static1.squarespace.com/static/58ea60f83e00be49e5d70084/58ea7704893fc0148fc119a0/5ac7eb9303ce640b6bf573a6/1528236082818/?format=1000w "UV Laser Pointer")
+<img src="http://static1.squarespace.com/static/58ea60f83e00be49e5d70084/58ea7704893fc0148fc119a0/5ac7eb9303ce640b6bf573a6/1528236082818/?format=1000w"
+alt="UV Laser Pointer" width="367" height="242" border="10" />
 
-![alt text](https://images-na.ssl-images-amazon.com/images/I/31xnQYPuQpL.jpg "UV Laser with wires")
+<img src="https://images-na.ssl-images-amazon.com/images/I/31xnQYPuQpL.jpg"
+alt="Laser with wires" width="367" height="206" border="10" />
 
-I'll be covering the assembly for the regular laser pointer without wires, because that is what I used for my project. The idea behind this assembly is that you want to turn the UV laser from the first image into something like the second image. Firstly, unscrew the laser so you only have the head of the laser. Grab two wires and strip a little bit off both ends; to create attachment pins on either side(you can make any jumper wires work). Take one wire and carefully solder it onto the spring of the laser, this will act as the positive terminal. Using some heat shrink and a heat gun, insulate the wire attached to the spring. Take the second wire and press it down onto the laser pointer button, and secure it with electric tape(make sure the button is pressed down), this will be ground.
+I'll be covering the assembly for the regular laser pointer without wires, because that is what I used for my project. The idea behind this assembly is that you want to turn the UV laser from the first image into something like the second image. Firstly, unscrew the laser so you only have the head of the laser. Grab two wires and strip a little bit off both ends; to create attachment pins on either side(you can make any jumper wires work). Take one wire and carefully solder it onto the spring of the laser, this will act as the ground connection. Using some heat shrink and a heat gun, insulate the wire attached to the spring. Take the second wire and press it down onto the laser pointer button, and secure it with electric tape(make sure the button is pressed down).
 
-![Laser](images/40363688_1786586968063415_6519779304723709952_n.jpg)
+<img src="images/40363688_1786586968063415_6519779304723709952_n.jpg"
+alt="Laser with wires" width="293" height="395" border="10" />
 
 ### Pan and Tilt Servo Mount Assembly
 
@@ -54,61 +67,92 @@ Now that the proper modifications to the laser have been made, it is time to att
 
 Secure the bottom portion of plexiglass using a vice; heat it up  using a heat gun, and start to slowly bend it backwards. Once the plexiglass is bent at more than a 90 degree angle, or has achieved its desired shape, let it cool. To finish, place a glow in the dark sticker sheet on the front of the plexiglass(the side facing the laser).
 
-![Screen](images/40294498_2226196900743574_6721739876846272512_n.jpg)
+<img src="images/40294498_2226196900743574_6721739876846272512_n.jpg"
+alt="Screen" width="293" height="395" border="10" />
 
 ### Board Assembly
 
-Apply acrylic and wood binding glue on one side of the wooden board; place bent portion of the screen to the glue, press down and wait to dry. Place the pan and tilt servo mount with laser attached **XYZ** cm away for the screen, and secure using hot glue or screws(the pan and tilt servo mount moves around a lot, so it's important that it's well secured). (Optional) Use some velcro patches to create secure locations for the Arduino UNO, and breadboard behind the laser.
+Apply acrylic and wood binding glue on one side of the wooden board; place bent portion of the screen to the glue, press down and wait to dry. Place the pan and tilt servo mount with laser attached 9.5in away for the screen(measured from front of mount), and secure using hot glue or screws(the pan and tilt servo mount moves around a lot, so it's important that it's well secured). (Optional) Use some velcro patches to create secure locations for the Arduino UNO, and breadboard behind the laser.
 
-![Board](images/40330276_1673844129391158_4240454445797736448_n.jpg)
+<img src="images/40330276_1673844129391158_4240454445797736448_n.jpg"
+alt="Board Setup" width="395" height="293" border="10" />
 
 ### Wiring
 
+#### Laser
+ 1. Wire soldered onto the spring is connected to ground.
+ 2. Wire taped to button is connected to the emitter on the NPN transistor.
+ 3. The base of the transistor goes through a 220 Ohm resistor, and into pin 1.
+ 4. The collector is connected to the 5V.
 
-### Useful links with regard to wiring
+[NPN transistor pin schematic](https://www.onsemi.com/pub/Collateral/PN2222-D.PDF)
 
-## Running the tests
+#### Micro Servo motors
+ - Servo X (responsible for movement along x-axis) attached to pin 2.
+ - Servo Y (responsible for movement along y-axis) attached to pin 3.
 
-Explain how to run the automated tests for this system
+ <img src="https://c2.staticflickr.com/6/5472/31084586086_90cf3e51e9_o.jpg"
+ alt="Micro Servo Wiring" width="350" height="131" border="10" />
 
-### Break down into end to end tests
+#### Tiny RTC
 
-Explain what these tests test and why
+ - Wiring is the same as in the image provided.
 
+<img src="https://www.elecrow.com/wiki/images/2/23/TinyRTC_hardware.jpg"
+alt="Micro Servo Wiring" height="303" width="367" border="10" />
+
+#### End Result
+<img src="images/wiring.jpg"
+alt="Wiring" width="395" height="293" border="10" />
+
+## Programming
+
+### Running tests
+
+Now that the board is assembled, it is important to define the x and y range of the servo mount. Each individual servo can be written an angle from 0 to 180 using the `servo.write()` command. The servo angle reader program provided takes in a value from 0 to 180 in the serial monitor, and writes the servo to that angle. This is useful for running tests to define the screen real estate used for writing out the time.
+
+Provided is a rough diagram of how space is allocated on the screen with regards to the servo angles for the x-axis(blue) and y-axis(green). The four large slots are for numbers in the 24h time format, and the small slot in the center is for the colon.
+
+<img src="images/screenspace.png"
+alt="Screen space" border="10" />
+
+### Writing numbers
+
+Each number is defined with a certain number of points the servo has to navigate to, to draw out said number. For example, the number 9 has 5 points the servos have to move to with the laser on, to draw out the shape.
+
+<img src="images/number.png"
+alt="Screen space" width="343" height="411" border="10" />
+
+Example of code needed to write 9 in the first slot.
 ```
-Give an example
+void nine(){
+  servox.write(103);
+  servoy.write(32);
+  delay(200);
+  digitalWrite(laser, HIGH);
+  delay(200);
+  servoy.write(43);
+  delay(200);
+  servox.write(110);
+  delay(200);
+  servoy.write(39);
+  delay(200);
+  servox.write(103);
+  delay(200);
+  digitalWrite(laser, LOW);
+}
 ```
+Important to note, that this solution only works for my specific setup. The range of the x and y servo angles can vary based on the distance between mount and screen, as well as screen angle. Provided code and instructions would be best used as rough guidelines.
 
-### And coding style tests
+### Useful Links
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+ - [Information on Servos, and their functions.](https://www.arduino.cc/en/Reference/Servo)
+ - [Information on programming using the Tiny RTC.](https://www.elecrow.com/wiki/index.php?title=Tiny_RTC)
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+Igor Banin
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+[Original Inspiration!](https://www.reddit.com/r/DIY/comments/6wiorj/made_a_glow_in_the_dark_laser_clock/)
