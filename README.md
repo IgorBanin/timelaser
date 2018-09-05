@@ -77,9 +77,9 @@ Apply acrylic and wood binding glue on one side of the wooden board; place bent 
 <img src="images/40330276_1673844129391158_4240454445797736448_n.jpg"
 alt="Board Setup" width="395" height="293" border="10" />
 
-### Wiring
+## Wiring
 
-#### Laser
+### Laser
  1. Wire soldered onto the spring is connected to ground.
  2. Wire taped to button is connected to the emitter on the NPN transistor.
  3. The base of the transistor goes through a 220 Ohm resistor, and into pin 1.
@@ -87,21 +87,21 @@ alt="Board Setup" width="395" height="293" border="10" />
 
 [NPN transistor pin schematic](https://www.onsemi.com/pub/Collateral/PN2222-D.PDF)
 
-#### Micro Servo motors
+### Micro Servo motors
  - Servo X (responsible for movement along x-axis) attached to pin 2.
  - Servo Y (responsible for movement along y-axis) attached to pin 3.
 
  <img src="https://c2.staticflickr.com/6/5472/31084586086_90cf3e51e9_o.jpg"
  alt="Micro Servo Wiring" width="350" height="131" border="10" />
 
-#### Tiny RTC
+### Tiny RTC
 
  - Wiring is the same as in the image provided.
 
 <img src="https://www.elecrow.com/wiki/images/2/23/TinyRTC_hardware.jpg"
 alt="Micro Servo Wiring" height="303" width="367" border="10" />
 
-#### End Result
+### End Result
 <img src="images/wiring.jpg"
 alt="Wiring" width="395" height="293" border="10" />
 
