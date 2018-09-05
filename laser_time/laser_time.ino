@@ -1,3 +1,14 @@
+/* Igor Banin
+ * 8/28/2018
+ * Time Laser Display
+ * 
+ * Displays the time in 24hr format on a glow in the dark sticker sheet 
+ * using an ultraviolet laser. This class stores the functionality 
+ * of breaking down the information received from the tiny RTC, determining
+ * which numbers need to be drawn, and drawing those numbers using x and y
+ * servo motor movements.
+ */
+
 #include <Servo.h>
 #include <Wire.h>
 #include "RTClib.h"
@@ -6,12 +17,16 @@ RTC_DS1307 RTC;
 #define laser 1
 Servo servox; 
 Servo servoy; 
-int rightX = 58;
+int rightX = 58; 
 int leftX = 113;
 int upY = 45;
 int downY = 30;
-int overallPos = 0;
+int overallPos = 0; //Variable responsible for determining character position. 
 
+/* Initializes the laser, tiny RTC, and servo motors.
+ * Places the servo motors in their starting location, adjusts the RTC
+ * and turns off the laser.
+ */
 void setup() {
   pinMode(laser, OUTPUT);
   digitalWrite(laser, LOW);
@@ -24,6 +39,7 @@ void setup() {
   servoy.write(downY);
 }
 
+// Writes out the time in 24hr format every 30 seconds.
 void loop(){
   writeTime();
   overallPos = 0;
@@ -31,6 +47,9 @@ void loop(){
   digitalWrite(laser, LOW);
 }
 
+/* Processes information taken from the tiny RTC to determine which numbers 
+ * should be displayed, and writes those numbers on the sticker sheet.
+ */
 void writeTime() {
   DateTime now = RTC.now();
   String hour = String(now.hour(), DEC);
@@ -53,6 +72,10 @@ void writeTime() {
   decideNumber(time[3]);
 }
 
+/*  Given a character, calls on the methods responsible for writing that character
+ *  on the sticker sheet.
+ *  num: character to be written
+ */
 void decideNumber(char num){
   if(num == ':'){
     colon();
@@ -89,6 +112,11 @@ void decideNumber(char num){
   }
 }
 
+/* The characters are written onto the sticker sheet by turning the laser on/off 
+ * and using x and y servo movements. 
+ */
+ 
+// Writes out 0 on the sticker sheet.
 void zero(){
   servox.write(110 - overallPos);
   servoy.write(32);
@@ -106,6 +134,8 @@ void zero(){
   digitalWrite(laser, LOW);
 }
 
+
+// Writes out 1 on the sticker sheet.
 void one(){
   servox.write(107 - overallPos);
   servoy.write(32);
@@ -117,6 +147,8 @@ void one(){
   digitalWrite(laser, LOW);
 }
 
+
+// Writes out 2 on the sticker sheet.
 void two(){
   servox.write(103 - overallPos);
   servoy.write(32);
@@ -139,6 +171,8 @@ void two(){
   digitalWrite(laser, LOW);
 }
 
+
+// Writes out 3 on the sticker sheet.
 void three(){
   servox.write(110 - overallPos);
   servoy.write(32);
@@ -160,6 +194,8 @@ void three(){
   digitalWrite(laser, LOW);
 }
 
+
+// Writes out 4 on the sticker sheet.
 void four(){
   servox.write(107 - overallPos);
   servoy.write(32);
@@ -176,6 +212,8 @@ void four(){
   digitalWrite(laser, LOW);
 }
 
+
+// Writes out 5 on the sticker sheet.
 void five(){
   servox.write(110 - overallPos);
   servoy.write(32);
@@ -195,6 +233,8 @@ void five(){
   digitalWrite(laser, LOW);
 }
 
+
+// Writes out 6 on the sticker sheet.
 void six(){
   servox.write(110 - overallPos);
   servoy.write(39);
@@ -214,6 +254,8 @@ void six(){
   digitalWrite(laser, LOW);
 }
 
+
+// Writes out 7 on the sticker sheet.
 void seven(){
   servox.write(110 - overallPos);
   servoy.write(32);
@@ -228,6 +270,8 @@ void seven(){
   digitalWrite(laser, LOW);
 }
 
+
+// Writes out 8 on the sticker sheet.
 void eight(){
   servox.write(103 - overallPos);
   servoy.write(32);
@@ -253,6 +297,8 @@ void eight(){
   digitalWrite(laser, LOW);
 }
 
+
+// Writes out 9 on the sticker sheet. 
 void nine(){
   servox.write(103 - overallPos);
   servoy.write(32);
@@ -270,6 +316,8 @@ void nine(){
   digitalWrite(laser, LOW);
 }
 
+
+// Writes out a : on the sticker sheet. 
 void colon(){
   servox.write(85);
   servoy.write(35);
@@ -284,4 +332,3 @@ void colon(){
   delay(300);
   digitalWrite(laser, LOW);
 }
-
