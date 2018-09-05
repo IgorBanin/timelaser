@@ -44,7 +44,7 @@ There are two types of UV lasers out there: ones with wires and ones without. I 
 
 I'll be covering the assembly for the regular laser pointer without wires, because that is what I used for my project. The idea behind this assembly is that you want to turn the UV laser from the first image into something like the second image. Firstly, unscrew the laser so you only have the head of the laser. Grab two wires and strip a little bit off both ends; to create attachment pins on either side(you can make any jumper wires work). Take one wire and carefully solder it onto the spring of the laser, this will act as the positive terminal. Using some heat shrink and a heat gun, insulate the wire attached to the spring. Take the second wire and press it down onto the laser pointer button, and secure it with electric tape(make sure the button is pressed down), this will be ground.
 
-![Laser](Pictures/40293604_1026385217540250_1169050661581488128_n.jpg)
+![Laser](/images/40363688_1786586968063415_6519779304723709952_n (1).jpg)
 
 ### Pan and Tilt Servo Mount Assembly
 
