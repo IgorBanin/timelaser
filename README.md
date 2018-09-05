@@ -155,4 +155,4 @@ Igor Banin
 
 ## Acknowledgments
 
-[Original Inspiration!](https://www.reddit.com/r/DIY/comments/6wiorj/made_a_glow_in_the_dark_laser_clock/)
+[Original Inspiration](https://www.reddit.com/r/DIY/comments/6wiorj/made_a_glow_in_the_dark_laser_clock/)
