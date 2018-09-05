@@ -61,11 +61,11 @@ alt="Laser with wires" width="293" height="395" border="10" />
 
 ### Pan and Tilt Servo Mount Assembly
 
-Now that the proper modifications to the laser have been made, it is time to attach the laser to the pan and tilt servo mount. Cut out two pieces(rectangular boxes) of block foam that fit snugly into the top of the servo mount. Carve out a little bit of foam in the center of these two pieces(aiming for a half cylinder shape), this will be where the laser will go. Place the laser in between both pieces of foam, and secure the foam laser sandwich by tightly wrapping tape at the front and back. Once this is done, go ahead and place the foam laser sandwich, into the tight space on top of the servo mount.
+Now that the proper modifications to the laser have been made, it is time to attach the laser to the pan and tilt servo mount. Cut out two pieces(rectangular boxes) of block foam that fit snugly into the top of the servo mount. Carve out a little bit of foam in the center of these two pieces(aiming for a half cylinder shape), this will be where the laser will go. Place the laser in between both pieces of foam, and secure the foam laser sandwich by tightly wrapping tape at the front and back. Once this is done, go ahead and place the foam laser sandwich into the tight space on top of the servo mount.
 
 ### Screen Assembly
 
-Secure the bottom portion of plexiglass using a vice; heat it up  using a heat gun, and start to slowly bend it backwards. Once the plexiglass is bent at more than a 90 degree angle, or has achieved its desired shape, let it cool. To finish, place a glow in the dark sticker sheet on the front of the plexiglass(the side facing the laser).
+Secure the bottom portion of the plexiglass using a vice. Heat it up  using a heat gun, and start to slowly bend it backwards. Once the plexiglass is bent at more than a 90 degree angle, or has achieved its desired shape, let it cool. To finish, place a glow in the dark sticker sheet on the front of the plexiglass(on the side facing the laser).
 
 <img src="images/40294498_2226196900743574_6721739876846272512_n.jpg"
 alt="Screen" width="293" height="395" border="10" />
@@ -120,7 +120,7 @@ alt="Screen space" border="10" />
 
 Each number is defined with a certain number of points the servo has to navigate to, to draw out said number. For example, the number 9 has 5 points the servos have to move to with the laser on, to draw out the shape.
 
-<img src="images/number.png"
+<img src="images/number.PNG"
 alt="Screen space" width="343" height="411" border="10" />
 
 Example of code needed to write 9 in the first slot.
