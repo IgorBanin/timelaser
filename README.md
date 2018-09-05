@@ -34,7 +34,34 @@ This project is programmed on an Arduino UNO, using the [Arduino IDE](https://ww
 
 ## Assembly Instructions
 
+### Laser Assembly
 
+There are two types of UV lasers out there: ones with wires and ones without. I recommend getting the ones with wires because that simplifies the assembly process.
+
+![alt text](http://static1.squarespace.com/static/58ea60f83e00be49e5d70084/58ea7704893fc0148fc119a0/5ac7eb9303ce640b6bf573a6/1528236082818/?format=1000w "UV Laser Pointer")
+
+![alt text](https://images-na.ssl-images-amazon.com/images/I/31xnQYPuQpL.jpg "UV Laser with wires")
+
+I'll be covering the assembly for the regular laser pointer without wires, because that is what I used for my project. The idea behind this assembly is that you want to turn the UV laser from the first image into something like the second image. Firstly, unscrew the laser so you only have the head of the laser. Grab two wires and strip a little bit off both ends; to create attachment pins on either side(you can make any jumper wires work). Take one wire and carefully solder it onto the spring of the laser, this will act as the positive terminal. Using some heat shrink and a heat gun, insulate the wire attached to the spring. Take the second wire and press it down onto the laser pointer button, and secure it with electric tape(make sure the button is pressed down), this will be ground.
+
+![Laser](C:\Users\Igor\Pictures\40363688_1786586968063415_6519779304723709952_n.jpg)
+
+### Pan and Tilt Servo Mount Assembly
+
+Now that the proper modifications to the laser have been made, it is time to attach the laser to the pan and tilt servo mount. Cut out two pieces(rectangular boxes) of block foam that fit snugly into the top of the servo mount. Carve out a little bit of foam in the center of these two pieces(aiming for a half cylinder shape), this will be where the laser will go. Place the laser in between both pieces of foam, and secure the foam laser sandwich by tightly wrapping tape at the front and back. Once this is done, go ahead and place the foam laser sandwich, into the tight space on top of the servo mount.
+
+### Screen Assembly 
+
+Secure the bottom portion of plexiglass using a vice; heat it up  using a heat gun, and start to slowly bend it backwards. Once the plexiglass is bent at more than a 90 degree angle, or has achieved its desired shape, let it cool. To finish, place a glow in the dark sticker sheet on the front of the plexiglass(the side facing the laser).
+
+### Board Assembly
+
+Apply acrylic and wood binding glue on one side of the wooden board; place bent portion of the screen to the glue, press down and wait to dry. Place the pan and tilt servo mount with laser attached **XYZ** cm away for the screen, and secure with screws. (Optional) Use some velcro patches to create secure locations for the Arduino UNO, and breadboard behind the laser.
+
+### Wiring
+
+
+### Useful links with regard to wiring
 
 ## Running the tests
 
